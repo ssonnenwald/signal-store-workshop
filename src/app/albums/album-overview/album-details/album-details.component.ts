@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DatePipe, NgOptimizedImage } from '@angular/common';
-import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AlbumDetailsStore } from './album-details.store';
 
 @Component({
   selector: 'ngrx-album-details',
   standalone: true,
-  imports: [NgOptimizedImage, DatePipe, MatProgressSpinner],
+  imports: [NgOptimizedImage, DatePipe, MatProgressSpinnerModule],
   template: `
     @if (store.album(); as album) {
       <h2>{{ album.title }}</h2>
